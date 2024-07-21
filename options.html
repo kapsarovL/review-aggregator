@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Aggregator Settings</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #settings-form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4c4f50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Settings</h1>
+    <form id="settings-form">
+        <label>
+            Cache Duration (minutes):
+            <input type="number" id="cache-duration" min="1" value="60">
+        </label>
+        <button type="submit">Save</button>
+    </form>
+    
+    <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Review Aggregator",
+    "description": "Aggregator reviews from multiple e-commerce sites",
+    "version": "1.1",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "https://*.amazon.com/*",
+        "https://*.ebay.com/*",
+        "https://*.walmart.com/*"
+    ],
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icons128.pg"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls"],
+            "js": ["content.js"]
+        }
+    ],
+    "options_page": "options.html"
+}

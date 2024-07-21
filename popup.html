@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Aggregator Settings</title>
+   <style>
+    body {
+        font-family:'Times New Roman', sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+    }
+
+    #reviews-container {
+        padding: 10px;
+    }
+
+    #reviews-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .review-item {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .review-item:hover {
+        background-color: #f1f1f1;
+    }
+
+    #error-message {
+        color: red;
+    }
+   </style>
+</head>
+<body>
+   <div id="reviews-container">
+    <h1>Aggregated Reviews</h1>
+    <ul id="reviews-list"></ul>
+        <div id="error-message"></div>
+    
+   </div>
+    <script src="popup.js"></script>
+</body>
+</html>
